@@ -1,5 +1,7 @@
 🩺 Medical Insurance Cost Analysis — Python | MySQL | Power BI
+
 📘 Project Overview
+
 This project explores the Kaggle Medical Insurance Dataset to uncover the main factors that influence insurance charges, such as age, BMI, smoking status, family size, and region.
 The goal is to understand cost drivers, predict high-risk groups, and support strategic pricing and policy decisions for insurance companies.
 The workflow covers the entire data analytics pipeline:
@@ -11,7 +13,9 @@ A health insurance provider wants to better understand the key factors driving c
 They have noticed large variations in charges across different demographics and lifestyle factors (e.g., smokers vs. non-smokers, obesity levels, family size).
 You are tasked with answering the question:
 “How can demographic, lifestyle, and regional data be used to understand and manage the drivers of medical insurance costs?”
+
 🧮 Dataset Summary
+
 Source: Kaggle – Medical Cost Personal Dataset
 Rows: 1,338 | Columns: 7
 Column	Description
@@ -26,7 +30,9 @@ Feature Engineering:
 •	age_group: Categorized into Young Adult, Adult, Middle-aged, Senior
 •	bmi_group: Categorized into Underweight, Normal, Overweight, Obese
 •	children_group: Categorized into No Children, Small Family (1–2), Medium Family (3–4), Large Family (5+)
+
 🧰 Tools & Technologies
+
 Stage	Tool	Purpose
 Data Preparation	Python (pandas, seaborn, matplotlib)	Cleaning, transformation, and exploratory analysis
 Data Storage & Analysis	MySQL	Advanced analytical queries and aggregations
@@ -43,6 +49,7 @@ Key Steps
 •	Exported the cleaned dataset to CSV for MySQL import
 
 🗃️ Step 2: Data Analysis in MySQL
+
 Connected to MySQL using SQLAlchemy in Jupyter Notebook and executed analytical queries.
 Example SQL Queries
 1️⃣ Average Charges by Smoking Status and Region
@@ -82,6 +89,7 @@ GROUP BY region, children_group
 ORDER BY region, avg_charge DESC;
 
 📊 Step 3: Dashboard in Power BI
+
 The cleaned data was imported from MySQL into Power BI to create an interactive dashboard.
 Key Visuals
 Visual	Description
@@ -94,6 +102,7 @@ Treemap	Total Charges by Region and Smoking Status
 Map	Geographic distribution of total charges
 
 📈 Step 4: Key Insights
+
 •	Smokers pay up to 3× higher charges than non-smokers.
 •	BMI and smoking are the strongest predictors of high insurance cost.
 •	Middle-aged adults contribute the most to total charges.
@@ -101,6 +110,7 @@ Map	Geographic distribution of total charges
 •	Reducing smoker population by 10% can lower total expected charges significantly.
 
 💡 Step 5: Business Recommendations
+
 1.	Risk-Based Pricing: Adjust premiums dynamically based on age, BMI, and smoking behavior.
 2.	Preventive Health Programs: Incentivize healthy lifestyle adoption (e.g., non-smoker discounts).
 3.	Targeted Interventions: Focus on high-BMI, middle-aged customers for health education.
@@ -120,6 +130,7 @@ Map	Geographic distribution of total charges
  ┣ 📄 README.md
 
 ⚙️ Setup Instructions
+
 Prerequisites
 •	Python 3.8+
 •	MySQL 8+
@@ -131,6 +142,7 @@ jupyter notebook
 Then open and execute insurance_analysis.ipynb.
 
 🧠 Future Work
+
 •	Build a predictive model for insurance charges using regression.
 •	Automate ETL pipeline between Python → MySQL → Power BI.
 •	Integrate customer segmentation and risk scoring dashboards.
